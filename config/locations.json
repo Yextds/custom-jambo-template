@@ -1,7 +1,7 @@
 {
   "verticalKey": "locations", // The vertical key from your search configuration
-  "pageTitle": "Location Search", // !!!REPLACE THIS VALUE!!! The contents of the title tag and meta open graph tag for title
-  "metaDescription": "", // The meta tag for open graph description
+  "pageTitle": "Prezzo Restaurants - Location Search", // !!!REPLACE THIS VALUE!!! The contents of the title tag and meta open graph tag for title
+  "metaDescription": "Prezzo Restaurants - Location Search description", // The meta tag for open graph description
   "canonicalUrl": "", // The link tag for canonical URL as well as the meta tag for open graph url
   "keywords": "", // The meta tag for keywords
   "pageSettings": {

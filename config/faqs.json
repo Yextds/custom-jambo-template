@@ -1,9 +1,9 @@
 {
   "verticalKey": "faqs", // The vertical key from your search configuration
-  "pageTitle": "FAQ Search", // !!!REPLACE THIS VALUE!!! The contents of the title tag and meta open graph tag for title
-  // "metaDescription": "", // The meta tag for open graph description
-  // "canonicalUrl": "", // The link tag for canonical URL as well as the meta tag for open graph url
-  // "keywords": "", // The meta tag for keywords
+  "pageTitle": "Prezzo Restaurants - FAQ Search", // !!!REPLACE THIS VALUE!!! The contents of the title tag and meta open graph tag for title
+  "metaDescription": "Prezzo Restaurants - FAQ Search description", // The meta tag for open graph description
+  "canonicalUrl": "", // The link tag for canonical URL as well as the meta tag for open graph url
+  "keywords": "", // The meta tag for keywords
   "pageSettings": {
      "search": {
        "verticalKey": "faqs", // The vertical key from your search configuration
