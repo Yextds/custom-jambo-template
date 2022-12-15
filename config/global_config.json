@@ -1,10 +1,10 @@
 {
   "sdkVersion": "1.14", // The version of the Answers SDK to use
   // "token": "<REPLACE ME>", // The auth token to access Answers experience.
-  // "apiKey": "<REPLACE ME>", // The answers api key found on the experiences page. This will be provided automatically by the Yext CI system
-  // "experienceVersion": "<REPLACE ME>", // the Answers Experience version to use for API requests. This will be provided automatically by the Yext CI system
-  // "environment": "production", // The environment to run on for this Answers Experience. (i.e. 'production' or 'sandbox')
-  // "businessId": "<REPLACE ME>", // The business ID of the account. This will be provided automatically by the Yext CI system
+  "apiKey": "sandbox-025040ec7ed04ae3d42c3119a45ec16d", // The answers api key found on the experiences page. This will be provided automatically by the Yext CI system
+  "experienceVersion": "STAGING", 
+  "environment": "sandbox",  
+  "businessId": "3189106",
   // "initializeManually": true, // If true, the experience must be started by calling AnswersExperience.init() or AnswersExperienceFrame.init() for iframe integrations.
   // "useJWT": true, // Whether or not to enable JWT. If true, the apiKey will be hidden from the build output and the token must be specified through manual initialization.
   "sessionTrackingEnabled": true, // Whether or not session tracking is enabled for all pages
