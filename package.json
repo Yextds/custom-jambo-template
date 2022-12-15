@@ -43,7 +43,8 @@
     "simple-git": "^2.15.0",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.2.0",
-    "webpack-merge": "^5.7.3"
+    "webpack-merge": "^5.7.3",
+	"xmlhttprequest": "^1.8.0"
   },
   "dependencies": {
     "@vimeo/player": "^2.15.3",
