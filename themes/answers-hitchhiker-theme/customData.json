@@ -1,0 +1,49 @@
+{
+		"c_aM": "AM",
+		"c_dayOfTheWeek": "Day of the Week",
+		"c_demoWelcome": "Welcome Hello",
+		"c_footer": [
+			{
+				"label": "Privacy Policy",
+				"uRL": "/privacy-policy"
+			},
+			{
+				"label": "Copyright/Legal Info",
+				"uRL": "/copyright"
+			}
+		],
+		"c_friday": "Friday",
+		"c_header": [
+			{
+				"label": "About",
+				"uRL": "/about"
+			},
+			{
+				"label": "Menu",
+				"uRL": "/menu"
+			}
+		],
+		"c_monday": "Monday",
+		"c_orderDelivery": "Order Delivery",
+		"c_orderPickup": "Order Pickup",
+		"c_order_online": "Order Online",
+		"c_pM": "PM",
+		"c_restaurantHours": "Restaurant Hours",
+		"c_saturday": "Saturday",
+		"c_servicesLabel": "Services",
+		"c_store_details": "Store Details",
+		"c_sunday": "Sunday",
+		"c_thursday": "Thursday",
+		"c_tuesday": "Tuesday",
+		"c_wednesday": "Wednesday",
+		"id": "siteGlobalData",
+		"meta": {
+			"entityType": {
+				"id": "ce_site",
+				"uid": 105372
+			},
+			"locale": "en"
+		},
+		"name": "Home",
+		"uid": 29468441
+	}

@@ -1,5 +1,6 @@
 const getCleanedJamboInjectedData = require('../static/webpack/getCleanedJamboInjectedData');
 const packageJson = require('../package.json');
+const customDataJson = require('../customData.json');
 
 /**
  * Formats the data sent to the handlebars templates during Jambo builds.
@@ -19,10 +20,21 @@ module.exports = function (pageMetadata, siteLevelAttributes, pageNameToConfig) 
   const { relativePath, pageName } = pageMetadata;
   const { globalConfig, currentLocaleConfig, locale, env } = siteLevelAttributes;
   const currentPageConfig = pageNameToConfig[pageName];
+ 
+  let customResult = "";
+  /* let customData = getApiData().then(function(result) {				
+				 console.log('result  dd', result);	
+         customResult = 	result;							
+	});	
+  */
+
+  // console.log('customData', customDataJson);  
+  
   const templateData = {
     ...currentPageConfig,
     verticalConfigs: pageNameToConfig,
-    global_config: getLocalizedGlobalConfig(globalConfig, currentLocaleConfig, locale),
+    customData: customDataJson,
+    global_config: getLocalizedGlobalConfig(globalConfig, currentLocaleConfig, locale),    
     params: currentLocaleConfig.params || {},
     relativePath,
     env: {
@@ -59,6 +71,57 @@ function getLocalizedGlobalConfig(globalConfig, currentLocaleConfig, locale) {
   return localizedGlobalConfig;
 }
 
+async function getApiData() {
+
+    const fetchGetJSON = {
+      method: 'GET',
+      credentials: 'same-origin',
+      headers: {
+        'Accept': 'application/json'
+      }
+    };
+    
+    var request_url = 'https://jsonplaceholder.typicode.com/todos/1';    
+    // return response = await fetch(request_url);
+    return new Promise((async (resolve, reject) => {
+        /*fetch(request_url, fetchGetJSON ).then((res) => res.json()).then(function(data) {
+             console.log('fetch data', data); 
+             resolve(data.title); 			   
+        }).catch((err) => {
+        });*/
+
+        var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;  
+        var xhr = new XMLHttpRequest();      
+        var url = 'https://jsonplaceholder.typicode.com/todos/1';
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            console.log('responseText',this.responseText);                
+            // return this.responseText;
+            resolve(this.responseText); 	
+          }
+        }       
+        xhr.send();
+
+    })); 
+
+  }
+
+function getCustomApiData() { 
+        let data = "h"; 
+        var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;  
+        var xhr = new XMLHttpRequest();      
+        var url = 'https://jsonplaceholder.typicode.com/todos/1';
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+              // console.log('responseText fdfff',this.responseText);                
+              data = this.responseText;
+            }
+        }       
+        xhr.send();
+        return data; 
+}
 /**
  * Returns the provided template data without the API Key
  * 
