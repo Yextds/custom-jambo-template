@@ -1,7 +1,0 @@
-[
-  {
-    "pluginId": "urlWriteback",
-    "functionName": "onUrlChange",
-    "event": "ON_URL_CHANGE"
-  }
-]

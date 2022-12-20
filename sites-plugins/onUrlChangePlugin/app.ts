@@ -1,11 +1,12 @@
 import { updateEntity } from "./yext.ts";
 
-declare var FIELD_KEY: string;
+var FIELD_KEY = "geomodifier";
 
 export interface WritebackPayload {
   url: string;
   entityId: string;
   locale: string;
+  address: any;
 }
 
 export async function handleUrlWriteback(data: WritebackPayload) {
@@ -19,7 +20,8 @@ export async function handleUrlWriteback(data: WritebackPayload) {
 
 async function writebackUrl(data: WritebackPayload) {
   const updateField = {"meta": {"language": data.locale}}
-  updateField[FIELD_KEY] = data.url
-  let result = await updateEntity(data.entityId, updateField)
+  updateField[FIELD_KEY] = data.url;
+  console.log('updateEntity data', data);
+  let result = await updateEntity(data.entityId, updateField);
   return result
 }

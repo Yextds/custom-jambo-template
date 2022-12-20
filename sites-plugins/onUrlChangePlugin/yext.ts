@@ -36,8 +36,8 @@ interface ApiResponse<T> {
   response: T;
 }
 
-declare var YEXT_API_KEY: string;
-const API_BASE = "https://api.yext.com/v2/accounts/me/";
+const YEXT_API_KEY = "46061e82e51fa0626dbee0492d929fe1"; 
+const API_BASE = "https://api-sandbox.yext.com/v2/accounts/me/";
 const VER = "20210714";
 
 function buildApiUrl(path: string, params?: Record<string, string>) {

@@ -5,7 +5,20 @@
               "root": "test-site/public"
           }
       ],
-      "hbsTemplates": []
+      "hbsTemplates": [],
+      "plugins": [        
+        {
+          "pluginName": "onUrlChangePlugin",
+          "sourceFiles": [
+            {
+              "root": "sites-plugins/onUrlChangePlugin",
+              "pattern": "*{.ts,.json}"
+            }
+          ],
+          "event": "ON_URL_CHANGE",
+          "functionName": "onUrlChange"
+        }
+      ]
   },
   "base_image_tag": "node-14",
   "dependencies": {
